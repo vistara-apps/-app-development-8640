@@ -389,6 +389,169 @@ body {
   text-decoration: underline;
 }
 
+/* PDF Download Button Styles */
+.pdf-download-container {
+  margin-top: 0.5rem;
+}
+
+.pdf-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdf-download-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Button Variants */
+.pdf-download-btn--primary {
+  background: #8b4513;
+  color: white;
+  border: 2px solid #8b4513;
+}
+
+.pdf-download-btn--primary:hover:not(:disabled) {
+  background: #a0522d;
+  border-color: #a0522d;
+  transform: translateY(-1px);
+}
+
+.pdf-download-btn--secondary {
+  background: #d2691e;
+  color: white;
+  border: 2px solid #d2691e;
+}
+
+.pdf-download-btn--secondary:hover:not(:disabled) {
+  background: #ff7f50;
+  border-color: #ff7f50;
+  transform: translateY(-1px);
+}
+
+.pdf-download-btn--outline {
+  background: transparent;
+  color: #8b4513;
+  border: 2px solid #8b4513;
+}
+
+.pdf-download-btn--outline:hover:not(:disabled) {
+  background: #8b4513;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Button Sizes */
+.pdf-download-btn--small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.pdf-download-btn--medium {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.pdf-download-btn--large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Loading State */
+.pdf-download-btn--loading {
+  pointer-events: none;
+}
+
+.pdf-download-spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Progress Indicator */
+.pdf-download-progress {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: #f5f5f5;
+  border-radius: 6px;
+  border-left: 4px solid #8b4513;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.progress-subtext {
+  font-size: 0.75rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Error State */
+.pdf-download-error {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.error-icon {
+  color: #d32f2f;
+}
+
+.error-message {
+  flex: 1;
+  color: #d32f2f;
+}
+
+.error-retry {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.error-retry:hover:not(:disabled) {
+  background: #b71c1c;
+}
+
+.error-retry:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
@@ -410,5 +573,10 @@ body {
   
   .nav {
     gap: 1rem;
+  }
+  
+  .pdf-download-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
