@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { Link } from 'react-router-dom';
+import PDFDownloadButton from '../components/PDFDownloadButton';
 
 function Library() {
   const { user, products, purchases } = useApp();
@@ -43,6 +44,12 @@ function Library() {
                 <button className="btn btn-primary">
                   {product.category === 'workshop' ? 'Start Workshop' : 'Read E-book'}
                 </button>
+                <PDFDownloadButton 
+                  product={product} 
+                  isPurchased={true}
+                  variant="secondary"
+                  size="small"
+                />
               </div>
             </div>
           ))}

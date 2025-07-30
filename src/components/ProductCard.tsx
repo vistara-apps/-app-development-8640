@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { usePaymentContext } from '../hooks/usePaymentContext';
 import PaymentModal from './PaymentModal';
+import PDFDownloadButton from './PDFDownloadButton';
 
 interface Product {
   id: string;
@@ -10,6 +11,11 @@ interface Product {
   price: string;
   category: 'ebook' | 'workshop';
   icon: string;
+  detailedDescription?: string;
+  sampleContent?: string;
+  historicalContext?: string;
+  ingredients?: string[];
+  techniques?: string[];
 }
 
 interface ProductCardProps {
@@ -52,6 +58,12 @@ function ProductCard({ product }: ProductCardProps) {
               Purchase {product.category === 'workshop' ? 'Workshop' : 'E-book'}
             </button>
           )}
+          <PDFDownloadButton 
+            product={product} 
+            isPurchased={isPurchased}
+            variant="outline"
+            size="small"
+          />
         </div>
       </div>
       

@@ -14,6 +14,11 @@ interface Product {
   price: string;
   category: 'ebook' | 'workshop';
   icon: string;
+  detailedDescription?: string;
+  sampleContent?: string;
+  historicalContext?: string;
+  ingredients?: string[];
+  techniques?: string[];
 }
 
 interface Purchase {
@@ -52,7 +57,11 @@ const mockProducts: Product[] = [
     description: 'Experience the grandeur of ancient Roman banquets through interactive recipes and historical narratives.',
     price: '$12.99',
     category: 'ebook',
-    icon: '🏛️'
+    icon: '🏛️',
+    detailedDescription: 'Dive deep into the opulent world of Roman dining culture, from the simple meals of common citizens to the extravagant banquets of emperors. This comprehensive guide includes authentic recipes, dining etiquette, and the social significance of food in ancient Rome.',
+    historicalContext: 'Roman dining was a complex social ritual that reflected status, wealth, and cultural values. The wealthy Romans would host elaborate dinner parties called "convivium" that could last for hours, featuring multiple courses and entertainment.',
+    ingredients: ['Garum (fermented fish sauce)', 'Honey', 'Wine', 'Olive oil', 'Various herbs and spices', 'Wheat flour'],
+    sampleContent: 'Recipe for Libum (Roman Cheesecake): Mix 2 pounds of cheese with 1 pound of wheat flour. Add one egg and mix well. Shape into a loaf, wrap in bay leaves, and bake slowly on a hearth stone...'
   },
   {
     id: '2',
@@ -60,7 +69,12 @@ const mockProducts: Product[] = [
     description: 'Master the ancient art of Egyptian bread making with traditional techniques and ingredients.',
     price: '$24.99',
     category: 'workshop',
-    icon: '🍞'
+    icon: '🍞',
+    detailedDescription: 'Learn the sacred art of bread making as practiced by ancient Egyptian bakers. This hands-on workshop covers traditional fermentation methods, ancient grain varieties, and the spiritual significance of bread in Egyptian culture.',
+    historicalContext: 'Bread was the cornerstone of ancient Egyptian diet and economy. Egyptian bakers were highly respected craftsmen, and bread was so important it was used as currency and offered to the gods in religious ceremonies.',
+    techniques: ['Wild yeast cultivation', 'Clay oven construction', 'Ancient grain milling', 'Traditional kneading methods', 'Sacred baking rituals'],
+    ingredients: ['Emmer wheat', 'Wild yeast starter', 'Nile water', 'Date syrup', 'Sesame seeds'],
+    sampleContent: 'Day 1: Creating your wild yeast starter using ancient methods. We begin by mixing emmer flour with Nile-style water and allowing natural fermentation to occur over several days...'
   },
   {
     id: '3',
@@ -68,7 +82,11 @@ const mockProducts: Product[] = [
     description: 'Discover the simple yet profound culinary traditions of medieval monastic life.',
     price: '$15.99',
     category: 'ebook',
-    icon: '⛪'
+    icon: '⛪',
+    detailedDescription: 'Explore the humble yet nourishing cuisine of medieval monasteries, where food was prepared with prayer and consumed in contemplative silence. Learn about seasonal eating, preservation techniques, and the spiritual aspects of cooking.',
+    historicalContext: 'Medieval monasteries were centers of agricultural innovation and food preservation. Monks developed many techniques for brewing, cheese-making, and herb cultivation that influenced European cuisine for centuries.',
+    ingredients: ['Barley', 'Root vegetables', 'Herbs from monastery gardens', 'Preserved meats', 'Monastery-brewed ale', 'Fresh dairy'],
+    sampleContent: 'Brother Benedict\'s Pottage: A hearty stew made from barley, turnips, and whatever vegetables the monastery garden provided. This simple dish sustained monks through long days of prayer and labor...'
   },
   {
     id: '4',
@@ -76,7 +94,12 @@ const mockProducts: Product[] = [
     description: 'Learn the lost art of ancient fermentation techniques from around the world.',
     price: '$29.99',
     category: 'workshop',
-    icon: '🍯'
+    icon: '🍯',
+    detailedDescription: 'Master the ancient science of fermentation through hands-on practice with traditional methods from various cultures. Create your own fermented foods using time-tested techniques that predate modern refrigeration.',
+    historicalContext: 'Fermentation was humanity\'s first biotechnology, allowing our ancestors to preserve food, create alcoholic beverages, and develop complex flavors. Different cultures developed unique fermentation traditions based on local ingredients and climate.',
+    techniques: ['Wild fermentation', 'Clay vessel preparation', 'Traditional timing methods', 'Natural preservation', 'Flavor development'],
+    ingredients: ['Various grains and vegetables', 'Wild yeasts and bacteria', 'Sea salt', 'Honey', 'Traditional fermentation vessels'],
+    sampleContent: 'Creating Kvass: This ancient Slavic fermented beverage begins with stale bread and natural fermentation. The process teaches patience and observation as you learn to read the signs of proper fermentation...'
   },
   {
     id: '5',
@@ -84,7 +107,11 @@ const mockProducts: Product[] = [
     description: 'Journey through the harsh lands of the Vikings and their hearty, survival-based cuisine.',
     price: '$18.99',
     category: 'ebook',
-    icon: '⚔️'
+    icon: '⚔️',
+    detailedDescription: 'Experience the robust flavors of Viking cuisine, designed for warriors and seafarers who needed sustaining meals for long journeys and harsh winters. Learn about preservation techniques, foraging, and the social aspects of Viking feasting.',
+    historicalContext: 'Viking cuisine was shaped by the harsh Scandinavian climate and the need for portable, long-lasting foods during raids and exploration. Feasting was central to Viking culture, strengthening bonds between warriors and celebrating victories.',
+    ingredients: ['Preserved fish', 'Game meats', 'Root vegetables', 'Wild berries', 'Fermented dairy', 'Mead and ale'],
+    sampleContent: 'Preparing for a Viking Feast: The great hall fills with smoke from the central fire as whole animals roast on spits. Mead flows freely as warriors share tales of their adventures...'
   },
   {
     id: '6',
@@ -92,7 +119,11 @@ const mockProducts: Product[] = [
     description: 'Follow the ancient spice routes and learn to recreate the exotic flavors that shaped history.',
     price: '$22.99',
     category: 'ebook',
-    icon: '🌶️'
+    icon: '🌶️',
+    detailedDescription: 'Embark on a culinary journey along the ancient spice routes, discovering how precious spices transformed cuisines and economies across continents. Learn to use traditional spice combinations and preservation methods.',
+    historicalContext: 'The spice trade was one of the most important economic forces in ancient history, connecting East and West and driving exploration and cultural exchange. Spices were literally worth their weight in gold.',
+    ingredients: ['Cinnamon', 'Black pepper', 'Cardamom', 'Saffron', 'Star anise', 'Cloves', 'Nutmeg'],
+    sampleContent: 'The Merchant\'s Blend: A carefully guarded recipe from ancient Damascus, combining seven precious spices in proportions that create a flavor profile both exotic and harmonious...'
   }
 ];
 
