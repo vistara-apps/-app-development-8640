@@ -32,24 +32,24 @@ function ProductCard({ product }: ProductCardProps) {
 
   return (
     <>
-      <div className="product-card">
+      <div className="product-card hover-lift">
         <div className="product-image">
           {product.icon}
         </div>
         <div className="product-content">
-          <h3>{product.name}</h3>
-          <div className="product-price">{product.price}</div>
-          <p>{product.description}</p>
+          <h3 className="font-semibold">{product.name}</h3>
+          <div className="product-price font-bold">{product.price}</div>
+          <p className="text-secondary">{product.description}</p>
           {isPurchased ? (
             <button className="btn btn-secondary" disabled>
-              ✓ Purchased
+              ✅ Purchased
             </button>
           ) : (
             <button 
-              className="btn btn-primary"
+              className="btn btn-primary hover-scale transition-transform"
               onClick={handlePurchaseClick}
             >
-              Purchase {product.category === 'workshop' ? 'Workshop' : 'E-book'}
+              {product.category === 'workshop' ? '🎓 Get Workshop' : '📖 Get E-book'}
             </button>
           )}
         </div>
