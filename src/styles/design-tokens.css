@@ -50,9 +50,9 @@
   --color-background: var(--color-neutral-50);
   --color-surface: #ffffff;
   --color-surface-elevated: #ffffff;
-  --color-text-primary: var(--color-dark-900);
-  --color-text-secondary: var(--color-neutral-700);
-  --color-text-muted: var(--color-neutral-600);
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #6b6b6b;
   --color-text-inverse: #ffffff;
   
   --color-success: #10b981;
@@ -170,4 +170,3 @@
     --color-text-muted: var(--color-neutral-400);
   }
 }
-
